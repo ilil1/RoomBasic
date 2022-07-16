@@ -9,8 +9,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(val context : Context,
-                var list : List<MemoEntity>,
-                var onDeleteListener: OnDeleteListener) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+                var list : MutableList<MemoEntity>,
+                var onDeleteListener: OnDeleteListener)
+    : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun getItemCount() = list.size
 

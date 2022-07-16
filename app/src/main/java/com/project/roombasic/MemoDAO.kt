@@ -15,7 +15,7 @@ interface MemoDAO {
 
     // *(별) -> all이라는 뜻
     @Query("SELECT * FROM memo")
-    fun getAll() : List<MemoEntity>
+    fun getAll() : MutableList<MemoEntity>
 
     @Delete
     fun delete(memo : MemoEntity)
